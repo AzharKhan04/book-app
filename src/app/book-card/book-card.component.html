@@ -1,0 +1,12 @@
+<div (click)="read(data)">
+	<img [src]="data.formats['image/jpeg']" style=" width:100px; height:150px" class="rounded"	/>
+	<div style="padding-top: 12px">
+	
+		<h6 style="font-size: 12px"><strong>{{data.title}}</strong></h6>
+	</div>
+	<div style="padding-top: 6px">
+	
+		<p style="color: grey;font-size: 12px;">{{data.authors[0].name}}</p>
+	</div>
+
+</div>

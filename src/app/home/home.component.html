@@ -1,0 +1,18 @@
+
+<div class="container">
+
+	<div class="row" style="padding-top: 40px">
+		<div class="col-md-12 text-center">
+			<h1 style="color: white">Gutenberg</h1>
+			<h1 style="color: white">	Project	</h1>
+		
+		</div>
+	</div>
+
+	<div class="row" style="padding-top: 20px" *ngFor="let d of data">
+		<div class="col col-md-12" >
+			<app-category-card  [data]="d" ></app-category-card>
+		</div>
+	</div>
+	
+</div>

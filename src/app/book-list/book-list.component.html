@@ -1,0 +1,46 @@
+
+
+
+
+
+<div class="container-fluid"  *ngIf="booksReady">
+
+	<div style="background-color: #4E0098;height: 50px">
+	<div class="row">
+		<div class="col col-xs-1" >
+			<div (click)="back()">
+			<img [src]="backicon" >
+		</div>
+		</div>
+		<div class="col col-xs-1" >
+		<img [src]="searchicon">
+	</div>
+		<div class="col col-xs-10">
+
+		</div>
+	</div>
+
+</div>
+
+
+	<div class="row" style="padding-top: 20px">
+		<div class="col col-md-12">
+			<h3 style="color: #4E0098">{{bookCategory}}</h3>
+		</div>
+	</div>
+	<div class="row" style="padding-top: 20px "
+
+	 infiniteScroll
+            [infiniteScrollDistance]="2"
+            [infiniteScrollUpDistance]="1.5"
+            [infiniteScrollThrottle]="50"
+            (scrolled)="onScrollDown()"
+            (scrolledUp)="onScrollUp()"
+	>
+		<div class="col col-md-4 col-xs-4 col-sm-4" *ngFor="let b of books">
+			<app-book-card [data]="b"></app-book-card>
+		</div>
+	</div>
+</div>
+
+

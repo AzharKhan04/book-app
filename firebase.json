@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "dist/book-app",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
